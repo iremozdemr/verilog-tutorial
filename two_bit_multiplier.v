@@ -12,7 +12,7 @@ and G2 (C,A,B);
 endmodule
 //half adder end
 
-module iki_bit_carpici(
+module two_bit_multiplier(
     input [1:0] A,
     input [1:0] B,
     output [3:0] C

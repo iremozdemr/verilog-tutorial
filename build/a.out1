@@ -1,12 +1,6 @@
-**** module/scope: iki_bit_carpici
+**** module/scope: three_to_eight_decoder
      Flip-Flops   : 0
-     Logic Gates  : 4
-**** module/scope: iki_bit_carpici.h1
-     Flip-Flops   : 0
-     Logic Gates  : 2
-**** module/scope: iki_bit_carpici.h2
-     Flip-Flops   : 0
-     Logic Gates  : 2
+     Logic Gates  : 11
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 8
+     Logic Gates  : 11
