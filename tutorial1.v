@@ -7,7 +7,7 @@ module tutorial1(
     input a,
     input b,
     input [31:0] c,
-    output d;
+    output d
 );
     
 endmodule

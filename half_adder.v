@@ -1,8 +1,8 @@
 module half_adder(
     input A,
     input B,
-    output Cout,
-    output S;
+    output S,
+    output Cout
 );
 
 xor G1 (S,A,B);

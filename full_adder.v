@@ -3,7 +3,7 @@ module full_adder(
     input B,
     input Cin,
     output Cout,
-    output S;
+    output S
 );
 
 xor G1 (S,A,B,Cin);
