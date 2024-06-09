@@ -3,7 +3,7 @@ module odev1_devre(
     input B,
     input C,
     output F,
-    output Q;
+    output Q
 );
 
 wire bufferA;

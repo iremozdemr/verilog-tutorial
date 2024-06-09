@@ -1,0 +1,43 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x12fe07c60 .scope module, "odev1_devre" "odev1_devre" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "C";
+    .port_info 3 /OUTPUT 1 "F";
+    .port_info 4 /OUTPUT 1 "Q";
+o0x110008010 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x12fe185f0 .functor BUF 1, o0x110008010, C4<0>, C4<0>, C4<0>;
+o0x110008070 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x12fe18660 .functor NOT 1, o0x110008070, C4<0>, C4<0>, C4<0>;
+o0x110008040 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x12fe18710 .functor OR 1, L_0x12fe185f0, o0x110008040, C4<0>, C4<0>;
+L_0x12fe18820 .functor XOR 1, L_0x12fe18710, L_0x12fe18660, C4<0>, C4<0>;
+L_0x12fe18950 .functor NOR 1, L_0x12fe18710, L_0x12fe18820, C4<0>, C4<0>;
+L_0x110040010 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x12fe18a30 .functor AND 1, L_0x12fe18660, L_0x110040010, C4<1>, C4<1>;
+L_0x12fe18ae0 .functor NOR 1, L_0x12fe18950, L_0x12fe18a30, C4<0>, C4<0>;
+v0x12fe07e50_0 .net "A", 0 0, o0x110008010;  0 drivers
+v0x12fe17e90_0 .net "B", 0 0, o0x110008040;  0 drivers
+v0x12fe17f30_0 .net "C", 0 0, o0x110008070;  0 drivers
+v0x12fe17fc0_0 .net "F", 0 0, L_0x12fe18ae0;  1 drivers
+v0x12fe18060_0 .net "Q", 0 0, L_0x12fe18a30;  1 drivers
+v0x12fe18140_0 .net/2u *"_ivl_6", 0 0, L_0x110040010;  1 drivers
+v0x12fe181f0_0 .net "bufferA", 0 0, L_0x12fe185f0;  1 drivers
+v0x12fe18290_0 .net "notC", 0 0, L_0x12fe18660;  1 drivers
+v0x12fe18330_0 .net "wire1", 0 0, L_0x12fe18710;  1 drivers
+v0x12fe18440_0 .net "wire2", 0 0, L_0x12fe18820;  1 drivers
+v0x12fe184d0_0 .net "wire3", 0 0, L_0x12fe18950;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "odev1_devre.v";

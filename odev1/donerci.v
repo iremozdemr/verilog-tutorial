@@ -5,11 +5,12 @@ module donerci(
     input [1:0] et_komut,
     input [1:0] kiyma_komut,
     input [1:0] tavuk_komut,
-    input [1:0] en_cok_satan_doner;
+    input [1:0] en_cok_satan_doner
 );
 
 //nasil yaptim:
-//1- etin yeni hizini bulmak icin dogruluk tablosu olusturdum
+//1- etin, tavukun, kiymanin yeni hizini bulmak icin 
+//her iki bit icin ayri dogruluk tablosu olusturdum
 //2- karno haritasi olusturdum
 //3- fonksiyonu olusturdum 
 //4- kapilari cizdim
@@ -137,6 +138,7 @@ assign en_cok_satan_doner[1] = en_cok_satan_doner_1;
 
 endmodule
 
+//karsilastirma icin ornek kod
 /*
 wire [1:0] hiz_et, hiz_kiyma, hiz_tavuk;
 wire et_vs_kiyma, et_vs_tavuk, kiyma_vs_tavuk;

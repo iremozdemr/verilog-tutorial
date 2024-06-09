@@ -2,7 +2,7 @@ module odev1_devre(
     input A,
     input B,
     output F,
-    output Q;
+    output Q
 );
 
 wire wire1;
