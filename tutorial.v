@@ -18,7 +18,7 @@ module tutorial1(
 endmodule
 
 //2. yazım şekli
-module tutorial1(a,b,c,d);
+module tutorial2(a,b,c,d);
     input a;
     input b;
     input [31:0] c,
