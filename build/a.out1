@@ -1,8 +1,12 @@
-**** module/scope: adder
+**** module/scope: iki_bit_carpici
      Flip-Flops   : 0
-     Logic Gates  : 64
-     ADDER[32]: 1 units
+     Logic Gates  : 4
+**** module/scope: iki_bit_carpici.h1
+     Flip-Flops   : 0
+     Logic Gates  : 2
+**** module/scope: iki_bit_carpici.h2
+     Flip-Flops   : 0
+     Logic Gates  : 2
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 64
-     ADDER[32]: 1 units
+     Logic Gates  : 8

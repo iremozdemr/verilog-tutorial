@@ -1,0 +1,75 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x12ee07ff0 .scope module, "iki_bit_carpici" "iki_bit_carpici" 2 15;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /OUTPUT 4 "C";
+L_0x12ee19200 .functor AND 1, L_0x12ee19290, L_0x12ee19370, C4<1>, C4<1>;
+L_0x12ee19830 .functor AND 1, L_0x12ee19670, L_0x12ee19750, C4<1>, C4<1>;
+L_0x12ee19a90 .functor AND 1, L_0x12ee19920, L_0x12ee199f0, C4<1>, C4<1>;
+L_0x12ee19fe0 .functor AND 1, L_0x12ee19da0, L_0x12ee19ec0, C4<1>, C4<1>;
+o0x110008340 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x12ee18820_0 .net "A", 1 0, o0x110008340;  0 drivers
+o0x110008370 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x12ee188e0_0 .net "B", 1 0, o0x110008370;  0 drivers
+v0x12ee18980_0 .net "C", 3 0, L_0x12ee1a090;  1 drivers
+o0x1100080a0 .functor BUFZ 1, C4<z>; HiZ drive
+v0x12ee18a30_0 .net "X", 0 0, o0x1100080a0;  0 drivers
+v0x12ee18b00_0 .net *"_ivl_1", 0 0, L_0x12ee19200;  1 drivers
+v0x12ee18bd0_0 .net *"_ivl_10", 0 0, L_0x12ee19750;  1 drivers
+v0x12ee18c80_0 .net *"_ivl_14", 0 0, L_0x12ee19920;  1 drivers
+v0x12ee18d30_0 .net *"_ivl_16", 0 0, L_0x12ee199f0;  1 drivers
+v0x12ee18de0_0 .net *"_ivl_22", 0 0, L_0x12ee19da0;  1 drivers
+v0x12ee18ef0_0 .net *"_ivl_24", 0 0, L_0x12ee19ec0;  1 drivers
+v0x12ee18fa0_0 .net *"_ivl_4", 0 0, L_0x12ee19290;  1 drivers
+v0x12ee19050_0 .net *"_ivl_6", 0 0, L_0x12ee19370;  1 drivers
+v0x12ee19100_0 .net *"_ivl_8", 0 0, L_0x12ee19670;  1 drivers
+L_0x12ee19290 .part o0x110008340, 0, 1;
+L_0x12ee19370 .part o0x110008370, 0, 1;
+L_0x12ee19670 .part o0x110008340, 0, 1;
+L_0x12ee19750 .part o0x110008370, 1, 1;
+L_0x12ee19920 .part o0x110008340, 1, 1;
+L_0x12ee199f0 .part o0x110008370, 0, 1;
+L_0x12ee19da0 .part o0x110008340, 1, 1;
+L_0x12ee19ec0 .part o0x110008370, 1, 1;
+o0x110008220 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x12ee1a090 .concat8 [ 1 1 1 1], L_0x12ee19200, L_0x12ee19450, L_0x12ee19b80, o0x110008220;
+S_0x12ee08390 .scope module, "h1" "half_adder" 2 25, 2 2 0, S_0x12ee07ff0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "Cout";
+L_0x12ee19450 .functor XOR 1, L_0x12ee19830, L_0x12ee19a90, C4<0>, C4<0>;
+L_0x12ee19540 .functor AND 1, L_0x12ee19830, L_0x12ee19a90, C4<1>, C4<1>;
+v0x12ee081c0_0 .net "A", 0 0, L_0x12ee19830;  1 drivers
+v0x12ee17f30_0 .net "B", 0 0, L_0x12ee19a90;  1 drivers
+v0x12ee17fd0_0 .net "C", 0 0, L_0x12ee19540;  1 drivers
+v0x12ee18080_0 .net "Cout", 0 0, o0x1100080a0;  alias, 0 drivers
+v0x12ee18120_0 .net "S", 0 0, L_0x12ee19450;  1 drivers
+S_0x12ee18240 .scope module, "h2" "half_adder" 2 32, 2 2 0, S_0x12ee07ff0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "Cout";
+L_0x12ee19b80 .functor XOR 1, L_0x12ee19fe0, o0x1100080a0, C4<0>, C4<0>;
+L_0x12ee19c30 .functor AND 1, L_0x12ee19fe0, o0x1100080a0, C4<1>, C4<1>;
+v0x12ee18470_0 .net "A", 0 0, L_0x12ee19fe0;  1 drivers
+v0x12ee18510_0 .net "B", 0 0, o0x1100080a0;  alias, 0 drivers
+v0x12ee185d0_0 .net "C", 0 0, L_0x12ee19c30;  1 drivers
+v0x12ee18680_0 .net "Cout", 0 0, o0x110008220;  0 drivers
+v0x12ee18710_0 .net "S", 0 0, L_0x12ee19b80;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "iki_bit_carpici.v";
