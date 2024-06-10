@@ -1,6 +1,6 @@
-**** module/scope: decoder_with_enable
+**** module/scope: at_yarisi
      Flip-Flops   : 0
-     Logic Gates  : 6
+     Logic Gates  : 60
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 6
+     Logic Gates  : 60
