@@ -127,7 +127,6 @@ not (not_hiz_kiyma_gt_tavuk, hiz_kiyma_gt_tavuk);
 and (kiyma_hizli, not_hiz_et_gt_kiyma, hiz_kiyma_gt_tavuk);
 and (tavuk_hizli, not_hiz_et_gt_tavuk, not_hiz_kiyma_gt_tavuk);
 
-
 wire en_cok_satan_doner_0, en_cok_satan_doner_1;
     
 or (en_cok_satan_doner_0, kiyma_hizli, tavuk_hizli);
