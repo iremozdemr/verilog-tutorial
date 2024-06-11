@@ -1,0 +1,95 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x125209150 .scope module, "birseycozucu_3x8" "birseycozucu_3x8" 2 27;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /OUTPUT 8 "B";
+L_0x12521d190 .functor NOT 1, L_0x12521d240, C4<0>, C4<0>, C4<0>;
+o0x1180306d0 .functor BUFZ 3, C4<zzz>; HiZ drive
+v0x12521cef0_0 .net "A", 2 0, o0x1180306d0;  0 drivers
+v0x12521cf80_0 .net "B", 7 0, L_0x12521ee80;  1 drivers
+v0x12521d010_0 .net *"_ivl_2", 0 0, L_0x12521d240;  1 drivers
+v0x12521d0c0_0 .net "notA2", 0 0, L_0x12521d190;  1 drivers
+L_0x12521d240 .part o0x1180306d0, 2, 1;
+L_0x12521e020 .part o0x1180306d0, 0, 2;
+L_0x12521e100 .part o0x1180306d0, 2, 1;
+L_0x12521ed60 .part o0x1180306d0, 0, 2;
+L_0x12521ee80 .concat8 [ 4 4 0 0], L_0x12521dbb0, L_0x12521e960;
+S_0x12520bac0 .scope module, "k1" "kodcozucu_2x4" 2 36, 2 1 0, S_0x125209150;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 1 "E";
+    .port_info 2 /OUTPUT 4 "B";
+L_0x12521d320 .functor NOT 1, L_0x12521d3e0, C4<0>, C4<0>, C4<0>;
+L_0x12521d4c0 .functor NOT 1, L_0x12521d570, C4<0>, C4<0>, C4<0>;
+L_0x12521d690 .functor AND 1, L_0x12521e100, L_0x12521d4c0, L_0x12521d320, C4<1>;
+L_0x12521d7a0 .functor AND 1, L_0x12521e100, L_0x12521d4c0, L_0x12521d870, C4<1>;
+L_0x12521d950 .functor AND 1, L_0x12521e100, L_0x12521da50, L_0x12521d320, C4<1>;
+L_0x12521dd30 .functor AND 1, L_0x12521e100, L_0x12521de60, L_0x12521df00, C4<1>;
+v0x12520bc30_0 .net "A", 1 0, L_0x12521e020;  1 drivers
+v0x12521b780_0 .net "B", 3 0, L_0x12521dbb0;  1 drivers
+v0x12521b830_0 .net "E", 0 0, L_0x12521e100;  1 drivers
+v0x12521b8e0_0 .net *"_ivl_10", 0 0, L_0x12521d7a0;  1 drivers
+v0x12521b990_0 .net *"_ivl_13", 0 0, L_0x12521d870;  1 drivers
+v0x12521ba80_0 .net *"_ivl_15", 0 0, L_0x12521d950;  1 drivers
+v0x12521bb30_0 .net *"_ivl_18", 0 0, L_0x12521da50;  1 drivers
+v0x12521bbe0_0 .net *"_ivl_2", 0 0, L_0x12521d3e0;  1 drivers
+v0x12521bc90_0 .net *"_ivl_20", 0 0, L_0x12521dd30;  1 drivers
+v0x12521bda0_0 .net *"_ivl_24", 0 0, L_0x12521de60;  1 drivers
+v0x12521be50_0 .net *"_ivl_26", 0 0, L_0x12521df00;  1 drivers
+v0x12521bf00_0 .net *"_ivl_5", 0 0, L_0x12521d570;  1 drivers
+v0x12521bfb0_0 .net *"_ivl_7", 0 0, L_0x12521d690;  1 drivers
+v0x12521c060_0 .net "notA0", 0 0, L_0x12521d320;  1 drivers
+v0x12521c100_0 .net "notA1", 0 0, L_0x12521d4c0;  1 drivers
+L_0x12521d3e0 .part L_0x12521e020, 0, 1;
+L_0x12521d570 .part L_0x12521e020, 1, 1;
+L_0x12521d870 .part L_0x12521e020, 0, 1;
+L_0x12521da50 .part L_0x12521e020, 1, 1;
+L_0x12521dbb0 .concat8 [ 1 1 1 1], L_0x12521d690, L_0x12521d7a0, L_0x12521d950, L_0x12521dd30;
+L_0x12521de60 .part L_0x12521e020, 1, 1;
+L_0x12521df00 .part L_0x12521e020, 0, 1;
+S_0x12521c1f0 .scope module, "k2" "kodcozucu_2x4" 2 42, 2 1 0, S_0x125209150;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 1 "E";
+    .port_info 2 /OUTPUT 4 "B";
+L_0x12521e1a0 .functor NOT 1, L_0x12521e210, C4<0>, C4<0>, C4<0>;
+L_0x12521e2f0 .functor NOT 1, L_0x12521e360, C4<0>, C4<0>, C4<0>;
+L_0x12521e480 .functor AND 1, L_0x12521d190, L_0x12521e2f0, L_0x12521e1a0, C4<1>;
+L_0x12521e570 .functor AND 1, L_0x12521d190, L_0x12521e2f0, L_0x12521e660, C4<1>;
+L_0x12521e700 .functor AND 1, L_0x12521d190, L_0x12521e800, L_0x12521e1a0, C4<1>;
+L_0x12521eab0 .functor AND 1, L_0x12521d190, L_0x12521eb60, L_0x12521ec40, C4<1>;
+v0x12521c400_0 .net "A", 1 0, L_0x12521ed60;  1 drivers
+v0x12521c490_0 .net "B", 3 0, L_0x12521e960;  1 drivers
+v0x12521c530_0 .net "E", 0 0, L_0x12521d190;  alias, 1 drivers
+v0x12521c5e0_0 .net *"_ivl_10", 0 0, L_0x12521e570;  1 drivers
+v0x12521c690_0 .net *"_ivl_13", 0 0, L_0x12521e660;  1 drivers
+v0x12521c780_0 .net *"_ivl_15", 0 0, L_0x12521e700;  1 drivers
+v0x12521c830_0 .net *"_ivl_18", 0 0, L_0x12521e800;  1 drivers
+v0x12521c8e0_0 .net *"_ivl_2", 0 0, L_0x12521e210;  1 drivers
+v0x12521c990_0 .net *"_ivl_20", 0 0, L_0x12521eab0;  1 drivers
+v0x12521caa0_0 .net *"_ivl_24", 0 0, L_0x12521eb60;  1 drivers
+v0x12521cb50_0 .net *"_ivl_26", 0 0, L_0x12521ec40;  1 drivers
+v0x12521cc00_0 .net *"_ivl_5", 0 0, L_0x12521e360;  1 drivers
+v0x12521ccb0_0 .net *"_ivl_7", 0 0, L_0x12521e480;  1 drivers
+v0x12521cd60_0 .net "notA0", 0 0, L_0x12521e1a0;  1 drivers
+v0x12521ce00_0 .net "notA1", 0 0, L_0x12521e2f0;  1 drivers
+L_0x12521e210 .part L_0x12521ed60, 0, 1;
+L_0x12521e360 .part L_0x12521ed60, 1, 1;
+L_0x12521e660 .part L_0x12521ed60, 0, 1;
+L_0x12521e800 .part L_0x12521ed60, 1, 1;
+L_0x12521e960 .concat8 [ 1 1 1 1], L_0x12521e480, L_0x12521e570, L_0x12521e700, L_0x12521eab0;
+L_0x12521eb60 .part L_0x12521ed60, 1, 1;
+L_0x12521ec40 .part L_0x12521ed60, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "birseycozucu_3x8.v";
