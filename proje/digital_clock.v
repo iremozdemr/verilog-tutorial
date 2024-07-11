@@ -47,6 +47,28 @@ module digital_clock(
     );
 
     seven_segment seg_hour_high_inst(
+        .digit(hour[7:4]), // Extract the high nibble (4 bits)
+        .segments(seg_hour_high)
+    );
+
+    seven_segment seg_hour_low_inst(
+        .digit(hour[3:0]), // Extract the low nibble (4 bits)
+        .segments(seg_hour_low)
+    );
+
+    seven_segment seg_min_high_inst(
+        .digit(minute[7:4]), // Extract the high nibble (4 bits)
+        .segments(seg_min_high)
+    );
+
+    seven_segment seg_min_low_inst(
+        .digit(minute[3:0]), // Extract the low nibble (4 bits)
+        .segments(seg_min_low)
+    );
+
+
+    /*
+    seven_segment seg_hour_high_inst(
         .digit(hour / 10),
         .segments(seg_hour_high)
     );
@@ -65,6 +87,7 @@ module digital_clock(
         .digit(minute % 10),
         .segments(seg_min_low)
     );
+    */
 
     always @(posedge clk) begin
         if (rst) begin
