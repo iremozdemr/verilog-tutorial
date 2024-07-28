@@ -7,6 +7,10 @@
 //çoklayıcı = multiplexer
 //tekleyici = demultiplexer
 
+//komutlar:
+//iverilog -o tutorial2_tb.vvp tutorial2_tb.v tutorial2.v
+//vvp tutorial2_tb.vvp
+
 //1. yazım şekli
 module module1(
     input a,
