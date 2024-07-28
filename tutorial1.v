@@ -8,7 +8,7 @@
 //tekleyici = demultiplexer
 
 //1. yazım şekli
-module tutorial1(
+module module1(
     input a,
     input b,
     input [31:0] c,
@@ -18,7 +18,7 @@ module tutorial1(
 endmodule
 
 //2. yazım şekli
-module tutorial2(a,b,c,d);
+module module2(a,b,c,d);
     input a;
     input b;
     input [31:0] c,
