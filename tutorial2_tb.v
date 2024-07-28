@@ -11,7 +11,7 @@ tutorial2 uut(
 );
 
 initial begin
-    $monitor("Time: %0d, a: %b, b: %b, y: %b", $time, a, b, y); //çıktı için monitor kullanımı
+    $monitor("time: %0d, a: %b, b: %b, y: %b", $time, a, b, y); //çıktı için monitor kullanımı
     a = 0;
     b = 0;
     #100; //100 zaman birimi bekle
