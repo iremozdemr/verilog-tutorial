@@ -1,10 +1,12 @@
-**** module/scope: dflipflop
-     Flip-Flops   : 2
-     Logic Gates  : 1
+**** module/scope: multiplexer_2_1
+     Flip-Flops   : 0
+     Logic Gates  : 2
+     MUX[2]: 1 slices
      LOG[13]: 1 unaccounted
      LOG[14]: 1 unaccounted
 **** TOTALS
-     Flip-Flops   : 2
-     Logic Gates  : 1
+     Flip-Flops   : 0
+     Logic Gates  : 2
+     MUX[2]: 1 slices
      LOG[13]: 1 unaccounted
      LOG[14]: 1 unaccounted
