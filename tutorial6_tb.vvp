@@ -1,0 +1,60 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x15be09c00 .scope module, "tutorial6_tb" "tutorial6_tb" 2 1;
+ .timescale 0 0;
+v0x15be1de50_0 .var "d0", 4 0;
+v0x15be1df00_0 .var "d1", 4 0;
+v0x15be1dfb0_0 .var "select", 0 0;
+v0x15be1e080_0 .net "y", 4 0, L_0x15be1e130;  1 drivers
+S_0x15be09d70 .scope module, "uut" "tutorial6" 2 9, 3 1 0, S_0x15be09c00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 5 "d0";
+    .port_info 1 /INPUT 5 "d1";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 5 "y";
+P_0x15be0c950 .param/l "width" 0 3 1, +C4<00000000000000000000000000000101>;
+v0x15be07670_0 .net "d0", 4 0, v0x15be1de50_0;  1 drivers
+v0x15be1dc60_0 .net "d1", 4 0, v0x15be1df00_0;  1 drivers
+v0x15be1dd00_0 .net "select", 0 0, v0x15be1dfb0_0;  1 drivers
+v0x15be1dd90_0 .net "y", 4 0, L_0x15be1e130;  alias, 1 drivers
+L_0x15be1e130 .functor MUXZ 5, v0x15be1de50_0, v0x15be1df00_0, v0x15be1dfb0_0, C4<>;
+    .scope S_0x15be09c00;
+T_0 ;
+    %vpi_call 2 17 "$monitor", "time: %0d, d0: %b, d1: %b, select: %b, y: %b", $time, v0x15be1de50_0, v0x15be1df00_0, v0x15be1dfb0_0, v0x15be1e080_0 {0 0 0};
+    %pushi/vec4 0, 0, 5;
+    %store/vec4 v0x15be1de50_0, 0, 5;
+    %pushi/vec4 0, 0, 5;
+    %store/vec4 v0x15be1df00_0, 0, 5;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15be1dfb0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 19, 0, 5;
+    %store/vec4 v0x15be1de50_0, 0, 5;
+    %pushi/vec4 6, 0, 5;
+    %store/vec4 v0x15be1df00_0, 0, 5;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15be1dfb0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 3, 0, 5;
+    %store/vec4 v0x15be1de50_0, 0, 5;
+    %pushi/vec4 19, 0, 5;
+    %store/vec4 v0x15be1df00_0, 0, 5;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15be1dfb0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 30 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tutorial6_tb.v";
+    "tutorial6.v";

@@ -1,8 +1,8 @@
-**** module/scope: tutorial5
+**** module/scope: tutorial6
      Flip-Flops   : 0
-     Logic Gates  : 8
-     MUX[2]: 4 slices
+     Logic Gates  : 10
+     MUX[2]: 5 slices
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 8
-     MUX[2]: 4 slices
+     Logic Gates  : 10
+     MUX[2]: 5 slices
