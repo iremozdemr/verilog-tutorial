@@ -35,8 +35,8 @@ module digital_clock (
     // Initial settings
     initial begin
         seconds = 8'h00;
-        minutes = 8'h00;
-        hours = 8'h00;
+        minutes = 8'h30;
+        hours = 8'h18;
         days = 16'd30;
         months = 16'd7;
         years = 16'd2024;
@@ -49,8 +49,8 @@ module digital_clock (
         if (rst) begin
             clk_div <= 0;
             seconds <= 8'h00;
-            minutes <= 8'h00;
-            hours <= 8'h00;
+            minutes <= 8'h30;
+            hours <= 8'h18;
             days <= 16'd30;
             months <= 16'd7;
             years <= 16'd2024;
@@ -82,8 +82,8 @@ module digital_clock (
     // Logic for adjusting time using buttons and switches
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            hours <= 8'h00;
-            minutes <= 8'h00;
+            hours <= 8'h18;
+            minutes <= 8'h30;
         end else begin
             // Hour adjustment
             if (btn[0]) hours <= (hours == 23) ? 8'h00 : hours + 1; // Hour increment

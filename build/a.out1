@@ -1,0 +1,24 @@
+**** module/scope: seven_segment_display
+     Flip-Flops   : 34
+     Logic Gates  : 196
+     ADDER[2]: 1 units
+     ADDER[32]: 1 units
+     EQUALITY[32]: 1 units
+     MUX[2]: 32 slices
+     LPM[5]: 3 unaccounted
+     LPM[12]: 2 unaccounted
+     LPM[13]: 4 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
+**** TOTALS
+     Flip-Flops   : 34
+     Logic Gates  : 196
+     ADDER[2]: 1 units
+     ADDER[32]: 1 units
+     EQUALITY[32]: 1 units
+     MUX[2]: 32 slices
+     LPM[5]: 3 unaccounted
+     LPM[12]: 2 unaccounted
+     LPM[13]: 4 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
