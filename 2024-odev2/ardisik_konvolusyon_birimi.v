@@ -11,15 +11,15 @@ module ardisik_konvolusyon_birimi (
 );
 
 wire hazir1; 
-// ilk konvolüsyon biriminin hazir sinyali
+//ilk konvolüsyon biriminin hazir sinyali
 wire [127:0] sonuc1; 
-// ilk konvolüsyon biriminin sonucu
+//ilk konvolüsyon biriminin sonucu
 reg [5:0] sayac; 
-// 32 çevrim için oluşturulan sayaç
+//32 çevrim için oluşturulan sayaç
 reg yeni_islem_baslat; 
-// yeni işlem başlatma sinyali
+//yeni işlem başlatma sinyali
 reg yeni_islem_izin; 
-// yeni işlemi başlatmak için izin sinyali
+//yeni işlemi başlatmak için izin sinyali
 
 konvolusyon_birimi uut1 (
     .saat(saat),
@@ -47,7 +47,7 @@ initial begin
     yeni_islem_izin = 0;
 end
 
-// reset ve sayaç işlemleri
+//reset ve sayaç işlemleri
 always @(posedge saat) begin
     if (reset) begin
         sayac <= 0;
@@ -66,12 +66,12 @@ always @(posedge saat) begin
             end
         end
 
-        // 32. çevrimden sonra sayaç ve hazir sinyalini resetleme
+        //32. çevrimden sonra sayaç ve hazir sinyalini resetleme
         if (sayac == 32) begin
             sayac <= 0;
         end
 
-        // yeni işlem izni 16 çevrim sonra verilmelidir
+        //yeni işlem izni 16 çevrim sonra verilmelidir
         if (sayac == 16) begin
             yeni_islem_izin <= 1;
         end
